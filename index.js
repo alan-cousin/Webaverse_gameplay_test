@@ -194,7 +194,7 @@ function keyboardCallBack() {
 	 var delta = clock.getDelta();
 	 var distanceMoved = 100 * delta;
    var angleRotated = distanceMoved/player.size;
-
+  
 	 if(keyboard.pressed("W")  && player.collisions.z != -1){
     player.translateZ(-distanceMoved);
     player.velocity.setZ(-100);
@@ -417,7 +417,7 @@ var render = function() {
 window.onload = init;
 
 function init(){
-    var fpsOut = document.getElementById('fps');
+      var fpsOut = document.getElementById('fps');
       setInterval(function(){
         fpsOut.innerHTML = (1000/frameTime).toFixed(1) + " fps";
         document.getElementById('fps').innerHTML = "Frame Rate: " + (1000/frameTime).toFixed(1) + " fps";
@@ -426,6 +426,8 @@ function init(){
         document.getElementById('highest').innerHTML = "Best Height: " + highestScore.toFixed(1);
 
         document.getElementById('current').innerHTML = "Current Height: " + player.position.y.toFixed(1);
+        document.getElementById('positionX').innerHTML = "X Position: " + player.position.x.toFixed(1);
+        document.getElementById('positionZ').innerHTML = "Z Position: " + player.position.z.toFixed(1);
       }, 100);
   }
      
