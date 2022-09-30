@@ -196,8 +196,8 @@ function keyboardCallBack() {
    var angleRotated = distanceMoved/player.size;
   
 	 if(keyboard.pressed("W")  && player.collisions.z != -1){
-    player.translateZ(0);
-    player.velocity.setZ(0);
+    player.translateZ(-distanceMoved);
+    player.velocity.setZ(-100);
     ball.rotateX(-angleRotated);
 	 }
 	 if(keyboard.pressed("A") && player.collisions.x != -1){
