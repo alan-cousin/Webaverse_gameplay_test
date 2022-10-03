@@ -428,7 +428,7 @@ function init(){
         document.getElementById('current').innerHTML = "Current Height: " + player.position.y.toFixed(1);
         document.getElementById('positionX').innerHTML = "X Position: " + player.position.x.toFixed(1);
         document.getElementById('positionZ').innerHTML = "Z Position: " + player.position.z.toFixed(1);
-        document.getElementById('position(x , y, z)').innerHTML = "Position: " + player.position.x.toFixed(1) + " " + player.position.y.toFixed(1) + " " + player.position.z.toFixed(1)
+        document.getElementById('position').innerHTML = "Position: " + player.position.x.toFixed(1) + " " + player.position.y.toFixed(1) + " " + player.position.z.toFixed(1)
       }, 100);
   }
      
