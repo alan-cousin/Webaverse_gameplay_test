@@ -192,27 +192,27 @@ var clock = new THREE.Clock(true);
 
 function keyboardCallBack() {
 	 var delta = clock.getDelta();
-	 var distanceMoved = 100 * delta;
+	 var distanceMoved = 10 * delta;
    var angleRotated = distanceMoved/player.size;
   
 	 if(keyboard.pressed("W")  && player.collisions.z != -1){
     player.translateZ(-distanceMoved);
-    player.velocity.setZ(-100);
+    player.velocity.setZ(-10);
     ball.rotateX(-angleRotated);
 	 }
 	 if(keyboard.pressed("A") && player.collisions.x != -1){
 	 	player.translateX(-distanceMoved);
-    player.velocity.setX(-100);
+    player.velocity.setX(-10);
     ball.rotateZ(angleRotated);
    }
    if(keyboard.pressed("S")  && player.collisions.z != 1){
       player.translateZ (distanceMoved);
-      player.velocity.setZ(100);
+      player.velocity.setZ(10);
       ball.rotateX(angleRotated);
 	 }
    if(keyboard.pressed("D") && player.collisions.x != 1){
    	player.translateX(distanceMoved);
-    player.velocity.setX(100);
+    player.velocity.setX(10);
     ball.rotateZ(-angleRotated);	 
   }
 
