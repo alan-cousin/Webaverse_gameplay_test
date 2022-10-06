@@ -430,7 +430,7 @@ function init(){
         let platform_pos = "";
         for(let i = 6; i <= 8; i++){
           if(allObstacles.length > i)
-            platform_pos = platform_pos + allObstacles[i].position.x.toFixed(1) + " " + allObstacles[i].position.y.toFixed(1) + " " + allObstacles[i].position.z.toFixed(1);
+            platform_pos = platform_pos + allObstacles[i].position.x.toFixed(1) + " " + allObstacles[i].position.y.toFixed(1) + " " + allObstacles[i].position.z.toFixed(1) + " ";
         }
         document.getElementById('Platform').innerHTML = platform_pos;
       }, 100);
