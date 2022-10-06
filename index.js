@@ -427,13 +427,12 @@ function init(){
 
         document.getElementById('current').innerHTML = "Current Height: " + player.position.y.toFixed(1);
         document.getElementById('position').innerHTML = "Position: " + player.position.x.toFixed(1) + " " + player.position.y.toFixed(1) + " " + player.position.z.toFixed(1);
-        if(allObstacles.length > 6)
-          document.getElementById('Platform1').innerHTML = "Platform1: " + allObstacles[6].position.x.toFixed(1) + " " + allObstacles[6].position.y.toFixed(1) + " " + allObstacles[6].position.z.toFixed(1)
-        if(allObstacles.length > 7)
-          document.getElementById('Platform2').innerHTML = "Platform2: " + allObstacles[7].position.x.toFixed(1) + " " + allObstacles[7].position.y.toFixed(1) + " " + allObstacles[7].position.z.toFixed(1)
-        if(allObstacles.length > 8)
-          document.getElementById('Platform3').innerHTML = "Platform3: " + allObstacles[8].position.x.toFixed(1) + " " + allObstacles[8].position.y.toFixed(1) + " " + allObstacles[8].position.z.toFixed(1)
-        
+        let platform_pos = "";
+        for(let i = 6; i <= 8; i++){
+          if(allObstacles.length > i)
+            platform_pos = platform_pos + allObstacles[i].position.x.toFixed(1) + " " + allObstacles[i].position.y.toFixed(1) + " " + allObstacles[i].position.z.toFixed(1);
+        }
+        document.getElementById('Platform').innerHTML = platform_pos;
       }, 100);
   }
      
