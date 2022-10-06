@@ -427,12 +427,12 @@ function init(){
 
         document.getElementById('current').innerHTML = "Current Height: " + player.position.y.toFixed(1);
         document.getElementById('position').innerHTML = "Position: " + player.position.x.toFixed(1) + " " + player.position.y.toFixed(1) + " " + player.position.z.toFixed(1);
-        let platform_pos = "{platforms:[";
+        let platform_pos = "{ platforms : [";
         for(let i = 6; i <= 8; i++){
           if(allObstacles.length > i)
-            platform_pos = platform_pos + "{ x:"+allObstacles[i].position.x.toFixed(1) + ",y:" + allObstacles[i].position.y.toFixed(1) + ",z:" + allObstacles[i].position.z.toFixed(1) + "},";
+            platform_pos = platform_pos + "{ x :"+allObstacles[i].position.x.toFixed(1) + ", y :" + allObstacles[i].position.y.toFixed(1) + ",z:" + allObstacles[i].position.z.toFixed(1) + "},";
         }
-        platform_pos =  platform_pos + "]}";
+        platform_pos =  platform_pos + "] }";
         document.getElementById('Platform').innerHTML = platform_pos;
       }, 100);
   }
