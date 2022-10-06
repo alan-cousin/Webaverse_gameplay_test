@@ -426,9 +426,14 @@ function init(){
         document.getElementById('highest').innerHTML = "Best Height: " + highestScore.toFixed(1);
 
         document.getElementById('current').innerHTML = "Current Height: " + player.position.y.toFixed(1);
-        document.getElementById('positionX').innerHTML = "X Position: " + player.position.x.toFixed(1);
-        document.getElementById('positionZ').innerHTML = "Z Position: " + player.position.z.toFixed(1);
-        document.getElementById('position').innerHTML = "Position: " + player.position.x.toFixed(1) + " " + player.position.y.toFixed(1) + " " + player.position.z.toFixed(1)
+        document.getElementById('position').innerHTML = "Position: " + player.position.x.toFixed(1) + " " + player.position.y.toFixed(1) + " " + player.position.z.toFixed(1);
+        if(allObstacles.length > 6)
+          document.getElementById('Platform1').innerHTML = "Platform1: " + allObstacles[6].position.x.toFixed(1) + " " + allObstacles[6].position.y.toFixed(1) + " " + allObstacles[6].position.z.toFixed(1)
+        if(allObstacles.length > 7)
+          document.getElementById('Platform2').innerHTML = "Platform2: " + allObstacles[7].position.x.toFixed(1) + " " + allObstacles[7].position.y.toFixed(1) + " " + allObstacles[7].position.z.toFixed(1)
+        if(allObstacles.length > 8)
+          document.getElementById('Platform3').innerHTML = "Platform3: " + allObstacles[8].position.x.toFixed(1) + " " + allObstacles[8].position.y.toFixed(1) + " " + allObstacles[8].position.z.toFixed(1)
+        
       }, 100);
   }
      
