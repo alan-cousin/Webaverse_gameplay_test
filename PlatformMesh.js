@@ -10,8 +10,8 @@ THREE.PlatformMesh = function (geometry, material) {
 	this.clock = new THREE.Clock(true);
 
 	//determine velocity
-	if (allObstacles.length < 8) {
-    this.velocity = 0;
+	if (allObstacles.length <= 5) {
+		this.velocity = 0.35;
 	} else if (allObstacles.length <= 10) {
 		this.velocity = (Math.random() * 0.25) + 0.25;
 	} else if (allObstacles.length <= 15) {
@@ -70,12 +70,7 @@ function moveAllPlatforms() {
 // generates position of the new platform using the current highest platform
 function newPlatformPosition() {
   //position of the highest platform
-  if (allObstacles.length == 8) {
-    x = -96;
-    y = 291;
-    z = 23;
-    return new THREE.Vector3(x,y,z);
-  } else {
+  
     var platPos = allObstacles[allObstacles.length-1].position;
 
     var radius = Math.random()*100 + 50;
@@ -96,7 +91,7 @@ function newPlatformPosition() {
     }
   
     return new THREE.Vector3(x,y,z);
-  }
+  
 
 }
 
